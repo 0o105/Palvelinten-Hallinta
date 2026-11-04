@@ -14,7 +14,7 @@
 - Kerrotaan miten ansiblea käytetään
 	- `ansible all -a 'uptime' -i hosts.ini`
 - Kerrotaan miten päästää **python virheestä eroon**
-- ```
+```
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 ```

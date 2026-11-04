@@ -10,8 +10,22 @@
 
 [Hello Ansible](https://terokarvinen.com/hello-ansible/)
 
--  
-## a)
+- Luodaan hosts.ini tiedosto
+- Kerrotaan miten ansiblea käytetään
+	- `ansible all -a 'uptime' -i hosts.ini`
+- Kerrotaan miten päästää **python virheestä eroon**
+- ```
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+```
+- Kerrotaan miten määritellään **hosts.ini** tiedosto inventory tiedostoksi
+	- **ansible.cfg**
+- **site.yml** määritys
+- Oikeat kansiot ja tiedostot oikeisiin paikkoihin
+- `ansible-playbook` komento
+- Miten käytetään **sudoa** ansiblen kanssa
+	- `become: true`
+## a) [[h0 Oikeasti netissä#a) Paikallista|Paikallista]]
 ## b) Sshecrets
 
 - Ensin päivitin järjestelmän paketit

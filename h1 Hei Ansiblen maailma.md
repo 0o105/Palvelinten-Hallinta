@@ -35,54 +35,54 @@ ansible_python_interpreter=/usr/bin/python3
 	- `sudo apt update`
 	- `sudo apt upgrade`
 
-![Pasted image 20261104120711.png](<Pasted image 20261104120711.png>)
+![h1 Hei Ansiblen maailma.png](<h1 Hei Ansiblen maailma.png>)
 
-![Pasted image 20261104120751.png](<Pasted image 20261104120751.png>)
+![h1 Hei Ansiblen maailma-1.png](<h1 Hei Ansiblen maailma-1.png>)
 
 -  Sitten asensin ssh-demonin
 	- `sudo apt install ssh`
 
-![Pasted image 20261104120936.png](<Pasted image 20261104120936.png>)
+![h1 Hei Ansiblen maailma-2.png](<h1 Hei Ansiblen maailma-2.png>)
 
 -  Asennuksen jälkeen laitoin sen päälle
 	- `sudo systemctl enable --now ssh`
 		-  Komento tekee niin että demoni on päällä järjestelmän käynnistyessä
 		-  `--now` tekee niin että se menee myös päälle heti
 
-![Pasted image 20261104121137.png](<Pasted image 20261104121137.png>)
+![h1 Hei Ansiblen maailma-3.png](<h1 Hei Ansiblen maailma-3.png>)
 
 - Testasin vielä kirjautumista
 	- `ssh localhost`
 
-![Pasted image 20261104121230.png](<Pasted image 20261104121230.png>)
+![h1 Hei Ansiblen maailma-4.png](<h1 Hei Ansiblen maailma-4.png>)
 ## c. Pubkey
 
 - Loin ssh avainparin
 	- `ssh-keygen`
 
-![Pasted image 20261104121352.png](<Pasted image 20261104121352.png>)
+![h1 Hei Ansiblen maailma-5.png](<h1 Hei Ansiblen maailma-5.png>)
 
 - Kopion juliksen avaimen serverille (localhost)
 	- `ssh-copy-id localhost`
 
-![Pasted image 20261104121524.png](<Pasted image 20261104121524.png>)
+![h1 Hei Ansiblen maailma-6.png](<h1 Hei Ansiblen maailma-6.png>)
 
 - Testasin vielä toimiiko kirjautuminen ilman salasanaa
 	- `ssh localhost`
 
-![Pasted image 20261104121633.png](<Pasted image 20261104121633.png>)
+![h1 Hei Ansiblen maailma-7.png](<h1 Hei Ansiblen maailma-7.png>)
 ## d. Hei Ansible
 
 - Ensin asensin ansiblen
 	- `sudo apt install ansible`
 - Sitten tein oman kansion missä voin tehdä ansible hommia
 	- `mkdir ansible`
-![Pasted image 20261104121958.png](<Pasted image 20261104121958.png>)
+![h1 Hei Ansiblen maailma-8.png](<h1 Hei Ansiblen maailma-8.png>)
 
 - Tein hosts tiedoston minne voin määritellä kaikki tietokoneet mitä haluan hallita ansiblella (tässä tapauksessa vain localhost)
 	- `echo localhost >> hosts.ini`
 
-![Pasted image 20261104122250.png](<Pasted image 20261104122250.png>)
+![h1 Hei Ansiblen maailma-9.png](<h1 Hei Ansiblen maailma-9.png>)
 
 - Testasin toimiiko se
 	- `ansible all -a 'uptime' -i hosts.ini`
@@ -90,25 +90,25 @@ ansible_python_interpreter=/usr/bin/python3
 		-  `-a` argumentilla voidaan määritellä mikä komento kohde koneessa suoritetaan tässä tapauksessa `uptime`
 		- `-i` määritellään inventory tiedosto
 			- Jotta komennossa ei tarvitse jokakerta määritellä inventory tiedostoa voin määritellä sen suoraan *ansible.cfg* tiedostoon 
-			- ![Pasted image 20261104123009.png](<Pasted image 20261104123009.png>)![Pasted image 20261104123046.png](<Pasted image 20261104123046.png>)
+			- ![h1 Hei Ansiblen maailma-10.png](<h1 Hei Ansiblen maailma-10.png>)![h1 Hei Ansiblen maailma-11.png](<h1 Hei Ansiblen maailma-11.png>)
 
 
 - Tein tarvittavat kansiot
 	- `mkdir -p ./roles/hello/tasks`
 
-![Pasted image 20261104124821.png](<Pasted image 20261104124821.png>)
+![h1 Hei Ansiblen maailma-12.png](<h1 Hei Ansiblen maailma-12.png>)
 
 - Tein *main.yml* tiedoston *tasks* kansioon johon määritin tehtävän
-	 ![Pasted image 20261104125151.png](<Pasted image 20261104125151.png>)
+	 ![h1 Hei Ansiblen maailma-13.png](<h1 Hei Ansiblen maailma-13.png>)
 
 - Sitten tein *site.yml* tiedoston
-		![Pasted image 20261104125337.png](<Pasted image 20261104125337.png>)
+		![h1 Hei Ansiblen maailma-14.png](<h1 Hei Ansiblen maailma-14.png>)
 
 - Testasin toimiiko `ansible-playbook site.yml`
 	- Jos toimii niin **tmp** kansiossa pitäisi olla **hello** niminen tiedosto jossa lukee **Hello World!!**
 
-![Pasted image 20261104125532.png](<Pasted image 20261104125532.png>)
-![Pasted image 20261104125637.png](<Pasted image 20261104125637.png>)
+![h1 Hei Ansiblen maailma-15.png](<h1 Hei Ansiblen maailma-15.png>)
+![h1 Hei Ansiblen maailma-16.png](<h1 Hei Ansiblen maailma-16.png>)
 
 - Toimi!!
 
@@ -116,15 +116,15 @@ ansible_python_interpreter=/usr/bin/python3
 
 - Halusin kopioda **hello** tiedoson **/etc** kansioon, mutta se vaatii sudo oikeudet
 	- Lisäsin **site.yml** tiedostoon `become: true`, että voin tehdä komentoja **sudo** oikeuksilla
-		![Pasted image 20261104130251.png](<Pasted image 20261104130251.png>)
+		![h1 Hei Ansiblen maailma-17.png](<h1 Hei Ansiblen maailma-17.png>)
 
 - Muutin **main.yml** tiedostosta kohde kansiota
-![Pasted image 20261104130612.png](<Pasted image 20261104130612.png>)
+![h1 Hei Ansiblen maailma-18.png](<h1 Hei Ansiblen maailma-18.png>)
 
 - Testasin toimiiko
 	- `ansible-playbook site.yml --ask-become-pass`
 		- `--ask-become-pass` kysyy sudo kohde koneen sudo salasanaa jotta komento voidaan toteuttaa
-![Pasted image 20261104130910.png](<Pasted image 20261104130910.png>)
-![Pasted image 20261104130955.png](<Pasted image 20261104130955.png>)
+![h1 Hei Ansiblen maailma-19.png](<h1 Hei Ansiblen maailma-19.png>)
+![h1 Hei Ansiblen maailma-20.png](<h1 Hei Ansiblen maailma-20.png>)
 
 - Toimi!!!

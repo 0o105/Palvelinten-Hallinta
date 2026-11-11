@@ -19,36 +19,36 @@
 
 - Ensin latasin [Debian 13](https://www.debian.org/) 
 
-![Pasted image 20261028122205.png](<Pasted image 20261028122205.png>)
+![h0 Oikeasti netissä.png](<h0 Oikeasti netissä.png>)
 
 - Virtuaaliympäristönä käytän virtmanageria (Qemu/KVM) 
 - Loin virtuaalikoneen ja säädin kaikki tarvittavat asetukset virtmanagerissa
 
-![Pasted image 20261028122337.png](<Pasted image 20261028122337.png>)
+![h0 Oikeasti netissä-1.png](<h0 Oikeasti netissä-1.png>)
 
-![Pasted image 20261028122356.png](<Pasted image 20261028122356.png>)
+![h0 Oikeasti netissä-2.png](<h0 Oikeasti netissä-2.png>)
 
-![Pasted image 20261028122412.png](<Pasted image 20261028122412.png>)
+![h0 Oikeasti netissä-3.png](<h0 Oikeasti netissä-3.png>)
 
-![Pasted image 20261028122430.png](<Pasted image 20261028122430.png>)
+![h0 Oikeasti netissä-4.png](<h0 Oikeasti netissä-4.png>)
 
-![Pasted image 20261028122447.png](<Pasted image 20261028122447.png>)
+![h0 Oikeasti netissä-5.png](<h0 Oikeasti netissä-5.png>)
 
 - Kun olin luonut koneen asensin itse Debianin
 
-![Pasted image 20261028122511.png](<Pasted image 20261028122511.png>)
+![h0 Oikeasti netissä-6.png](<h0 Oikeasti netissä-6.png>)
 
-![Pasted image 20261028122528.png](<Pasted image 20261028122528.png>)
+![h0 Oikeasti netissä-7.png](<h0 Oikeasti netissä-7.png>)
 
 - Debian 13 asennettu
 
-![Pasted image 20261028130321.png](<Pasted image 20261028130321.png>)
+![h0 Oikeasti netissä-8.png](<h0 Oikeasti netissä-8.png>)
 
 ## b. VPS
 
 - Vuokrasin serverin [Upcloudilta](https://upcloud.com/global/) 
 
-![Pasted image 20261028123237.png](<Pasted image 20261028123237.png>)
+![h0 Oikeasti netissä-9.png](<h0 Oikeasti netissä-9.png>)
 
 ## c. Alkutoimet
 
@@ -60,14 +60,14 @@
 - Lisään uuden käyttäjä komennolla 
 	- `adduser username` 
 
-![Pasted image 20261028124203.png](<Pasted image 20261028124203.png>)
+![h0 Oikeasti netissä-10.png](<h0 Oikeasti netissä-10.png>)
 
 - Lisään uuden käyttäjän ryhmään sudo komenolla 
 	- `usermod -aG sudo username` 
 - Varmistan että uusi käyttäjä varmasti lisättiin sudo ryhmään komenolla 
 	- `groups username` 
 
-![Pasted image 20261028124358.png](<Pasted image 20261028124358.png>)
+![h0 Oikeasti netissä-11.png](<h0 Oikeasti netissä-11.png>)
 
 - Seuraavaksi päivitin järjestelmän komenolla 
 	- `apt update && apt upgrade -y` 
@@ -75,7 +75,7 @@
 - Tämän jälkeen asensin palomuurin valitisn [UFW](https://wiki.archlinux.org/title/Uncomplicated_Firewall) 
 - Asensin sen komenolla
 	- `apt install ufw` 
-![Pasted image 20261028124733.png](<Pasted image 20261028124733.png>)
+![h0 Oikeasti netissä-12.png](<h0 Oikeasti netissä-12.png>)
 
 - Konfiguroin ufw:n sallimaan vain ssh yhteyden koneeseen komennoilla ja laitoin sen päälle
 
@@ -83,11 +83,11 @@
 - `uf default deny incoming`
 - `ufw enable` 
 
-![Pasted image 20261028125400.png](<Pasted image 20261028125400.png>)
+![h0 Oikeasti netissä-13.png](<h0 Oikeasti netissä-13.png>)
 
 ## d. Weppipalvelin
 
 - Asensin koneelle [nginx](https://nginx.org/) komenolla 
 	- `apt install nginx` 
 	
-![Pasted image 20261028132233.png](<Pasted image 20261028132233.png>)
+![h0 Oikeasti netissä-14.png](<h0 Oikeasti netissä-14.png>)

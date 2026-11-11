@@ -35,7 +35,6 @@
     group: "root" # tiedoston ryhmä
     mode: "0644" # Tiedoston luvat
 ```
-
 ### Ansible komennot:
 
 #### copy:

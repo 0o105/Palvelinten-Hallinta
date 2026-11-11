@@ -90,7 +90,8 @@ ansible_python_interpreter=/usr/bin/python3
 		-  `-a` argumentilla voidaan määritellä mikä komento kohde koneessa suoritetaan tässä tapauksessa `uptime`
 		- `-i` määritellään inventory tiedosto
 			- Jotta komennossa ei tarvitse jokakerta määritellä inventory tiedostoa voin määritellä sen suoraan *ansible.cfg* tiedostoon 
-			- ![h1 Hei Ansiblen maailma-10.png](/Assets/h1%20Hei%20Ansiblen%20maailma-10.png)![h1 Hei Ansiblen maailma-11.png](/Assets/h1%20Hei%20Ansiblen%20maailma-11.png)
+			![h1 Hei Ansiblen maailma-10.png](/Assets/h1%20Hei%20Ansiblen%20maailma-10.png)
+			![h1 Hei Ansiblen maailma-11.png](/Assets/h1%20Hei%20Ansiblen%20maailma-11.png)
 
 
 - Tein tarvittavat kansiot

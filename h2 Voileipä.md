@@ -156,11 +156,11 @@ Tämän jälkeen loin uuden ryhmän
 Sitten tein uuden käyttäjän ansiblea varten ja lisäsin sen **sudoless** ryhmään
 - `sudo adduser ansible`
 - `sudo adduser ansible sudoless`
- ![](h2%20Voileipä.png)
+ ![h2 Voileipä](/Assets/h2%20Voileipä.png)
 
 Tarkistin vielä että käyttäjä on varmasti ryhmässä
 - `sudo groups ansible`
-![](h2%20Voileipä-1.png)
+![h2 Voileipä-1](/Assets/h2%20Voileipä-1.png)
 
 Jotta pääsin kirjautumaan ansible käyttäjälle siirsin julkisen avaimen ansiblen .ssh kansioon
 - `sudo mkdir /home/ansible/.ssh`
@@ -170,13 +170,13 @@ Jotta pääsin kirjautumaan ansible käyttäjälle siirsin julkisen avaimen ansi
 Sitten kirjauduin ansible käyttäjällä sisään ja testasin toimiiko sudo ilman salasanaa
 - `ssh ansible@80.47.224.23`
 - `sudo ls -la`
-![](h2%20Voileipä-2.png)
+![h2 Voileipä-2](/Assets/h2%20Voileipä-2.png)
 
 ## b. Antero
 
 Tein uuden roolin ja siihen oikeat kansiot
 - `mkdir -p ansible/roles/sudoless/tasks`
-![](h2%20Voileipä-3.png)
+![h2 Voileipä-3](/Assets/h2%20Voileipä-3.png)
 
 Sitten tein **tasks** kansioon main.yml tiedoston
 
@@ -209,15 +209,15 @@ Muutin myös **site.yml** tiedostoa, jotta sudoless roolin taski tehdään
 
 Sitten kokeilin toimiiko
 - `ansible-playbook site.yml --ask-become-password`
-![](h2%20Voileipä-4.png)
+![h2 Voileipä-4](/Assets/h2%20Voileipä-4.png)
 
 Komento näytti siltä että se toimi mutta kokeilin vielä
 - koitin kirjautua sisään anatude käyttäjällä
 	- `ssh anatude@localhost`
-	![](h2%20Voileipä-5.png)
+	![h2 Voileipä-5](/Assets/h2%20Voileipä-5.png)
 - Koitin jotain sudo komentoa kun olin kirjautunut sisään anatude käyttäjänä
 	- `sudo ls -la`
-	![](h2%20Voileipä-6.png)
+	![h2 Voileipä-6](/Assets/h2%20Voileipä-6.png)
 
 ## c. package
 
@@ -246,14 +246,14 @@ Sitten muutin **site.yml** tiedostoa
 
 Sitten kokeilin toimiiko
 - `ansible-playbook site.yml`
-![](h2%20Voileipä-7.png)
+![h2 Voileipä-7](/Assets/h2%20Voileipä-7.png)
 
 Katsoin vielä ovatko ohjelmat oikeasti asennettu
 
 - `cowsay hello`
- ![](h2%20Voileipä-8.png)
+ ![h2 Voileipä-8](/Assets/h2%20Voileipä-8.png)
 - `fastfetch`
-![](h2%20Voileipä-9.png)
+![h2 Voileipä-9](/Assets/h2%20Voileipä-9.png)
 
 ## d. File
 
@@ -280,11 +280,11 @@ Tämän pitäisi tehdä tiedot **hello** kansioon **/home/anatude** tiedoston om
 
 Kokeilin toimiiko
 - `ansible-playbook site.yml`
-![](h2%20Voileipä-10.png)
+![h2 Voileipä-10](/Assets/h2%20Voileipä-10.png)
 
-![](h2%20Voileipä-11.png)
+![h2 Voileipä-11](/Assets/h2%20Voileipä-11.png)
 
-![](h2%20Voileipä-12.png)
+![h2 Voileipä-12](/Assets/h2%20Voileipä-12.png)
 
 ## e. Jotain muuta
 
@@ -313,6 +313,6 @@ Sitten tein sinne **main.yml** tiedoston
 - `owner:` tiedoston omistaja käyttäjä
 - `group:` tiedoston omistaja ryhmä
 
-![](h2%20Voileipä-13.png)
+![h2 Voileipä-13](/Assets/h2%20Voileipä-13.png)
 
-![](h2%20Voileipä-14.png)
+![h2 Voileipä-14](/Assets/h2%20Voileipä-14.png)

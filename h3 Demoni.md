@@ -8,20 +8,20 @@
 - Laitoin **Apachen** päälle komenolla
 	- `sudo systemctl enable --now apache2`
 - Menin selaimella osoitteeseen **localhost**
-![](h3%20Demoni.png)
+![h3 Demoni](/Assets/h3%20Demoni.png)
 
 - Jotta kuka tahansa voisi muokata sivua ilman **sudo** oikeuksia muutin tiedoston **/var/www/html/index.html** oikeude niin että ne on `-rw-rw-rw-` komennolla
 	- `sudo chmod 666 /var/www/html/index.html`
-![](h3%20Demoni-1.png)
+![h3 Demoni-1](/Assets/h3%20Demoni-1.png)
 ## b. Moottorix
 - Asensin **Nginx** komenolla
 	- `sudo apt install nginx`
 - Sitten menin osoitteeseen `localhost` selaimella
-![](h3%20Demoni-2.png)
+![h3 Demoni-2](/Assets/h3%20Demoni-2.png)
 
 - Jotta kuka tahansa voisi muokata sivua ilman **sudo** oikeuksia muutin tiedoston **/var/www/html/index.html** oikeude niin että ne on `-rwxrwxrwx` komennolla
 	- `sudo chmod 777 /var/www/html/index.nginx-debian.html`
-	![](h3%20Demoni-3.png)
+	![h3 Demoni-3](/Assets/h3%20Demoni-3.png)
 	
 ## c. Automoottorix
 
@@ -44,6 +44,6 @@
 ```
 
 - Sitten kokeilin `ansible-playbook site.yml`
-![](h3%20Demoni-4.png)
+![h3 Demoni-4](/Assets/h3%20Demoni-4.png)
 
-![](h3%20Demoni-5.png)
+![h3 Demoni-5](/Assets/h3%20Demoni-5.png)
